@@ -1,0 +1,19 @@
+.input-con-logo {
+    display: flex;
+    align-items: center; 
+    gap: 10px;        
+    margin-bottom: 15px; 
+}
+
+/* Tamaño estándar para los logos/iconos */
+.input-con-logo img {
+    width: 24px;   
+    height: 24px; 
+    object-fit: contain;
+}
+
+/* Estilo opcional para que los inputs o textos se vean ordenados */
+.input-con-logo input,
+.input-con-logo span {
+    font-size: 16px;
+}
