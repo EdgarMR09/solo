@@ -1,3 +1,22 @@
+.input-con-logo {
+    display: flex;
+    align-items: center; 
+    gap: 10px;        
+    margin-bottom: 15px; 
+}
+
+.input-con-logo img {
+    width: 24px;   
+    height: 24px; 
+    object-fit: contain;
+}
+
+.input-con-logo input,
+.input-con-logo span {
+    font-size: 16px;
+}
+
+/* === ESTILOS GENERALES DE CONTENEDORES (LOGIN Y REGISTRO) === */
 body.body-login,
 body.body-registro {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -37,6 +56,7 @@ body.body-registro {
     font-size: 14px;
 }
 
+/* Campos de entrada para Login y Registro */
 .login-container input[type="text"],
 .login-container input[type="password"],
 .registro-container .input-con-logo input {
@@ -80,6 +100,7 @@ body.body-registro {
     background-color: #357abd;
 }
 
+/* Enlaces */
 .login-container a,
 .registro-container a {
     display: block;
