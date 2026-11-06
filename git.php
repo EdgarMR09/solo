@@ -65,6 +65,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Usuarios</title>
+    <!-- Vinculamos la hoja de estilos externa -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h2>Registro de Usuarios</h2>
@@ -76,17 +78,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?php endif; ?>
 
     <form action="registro.php" method="POST">
+        
         <label for="nombre">Nombre:</label><br>
-        <input type="text" name="nombre" id="nombre" required><br><br>
+        <div class="input-con-logo">
+            <img src="ruta/de/tu/logo-nombre.png" alt="Logo Nombre">
+            <input type="text" name="nombre" id="nombre" required>
+        </div>
 
         <label for="usuario">Nombre de usuario (login):</label><br>
-        <input type="text" name="usuario" id="usuario" required><br><br>
+        <div class="input-con-logo">
+            <img src="ruta/de/tu/logo-usuario.png" alt="Logo Usuario">
+            <input type="text" name="usuario" id="usuario" required>
+        </div>
 
         <label for="password">Contraseña:</label><br>
-        <input type="password" name="password" id="password" required><br><br>
+        <div class="input-con-logo">
+            <img src="ruta/de/tu/logo-candado.png" alt="Logo Contraseña">
+            <input type="password" name="password" id="password" required>
+        </div>
 
         <label for="confirmar_password">Confirmar Contraseña:</label><br>
-        <input type="password" name="confirmar_password" id="confirmar_password" required><br><br>
+        <div class="input-con-logo">
+            <img src="ruta/de/tu/logo-candado.png" alt="Logo Confirmar">
+            <input type="password" name="confirmar_password" id="confirmar_password" required>
+        </div>
 
         <button type="submit">Registrarse</button>
     </form>
