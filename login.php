@@ -8,15 +8,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $usuario = trim($_POST['usuario'] ?? '');
     $password = $_POST['password'] ?? '';
 
-    // 1. Validar que los campos no estén vacíos
+    // campos no vacios
     if (empty($usuario) || empty($password)) {
         $mensaje = "Por favor, completa todos los campos.";
         $tipo_mensaje = "error";
     } else {
-        // Inicializar variable para rastrear si encontramos al usuario
+        //rastrear si encontramos al usuario
         $usuario_encontrado = null;
 
-        // 2. Buscar al usuario registrado en el arreglo de la sesión
+        // 2. Buscar al usuario registrado
         if (isset($_SESSION['usuarios'])) {
             foreach ($_SESSION['usuarios'] as $u) {
                 if ($u['usuario'] === $usuario) {
@@ -67,11 +67,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?php endif; ?>
 
         <form action="login.php" method="POST">
-            <label for="usuario">Nombre de usuario (login):</label>
-            <input type="text" name="usuario" id="usuario" required>
+            
+            <label for="usuario">Nombre de usuario (login):</label><br>
+            <div class="input-con-logo">
+                <img src="img/usuario.png" alt="Logo Usuario">
+                <input type="text" name="usuario" id="usuario" required>
+            </div>
 
-            <label for="password">Contraseña:</label>
-            <input type="password" name="password" id="password" required>
+            <label for="password">Contraseña:</label><br>
+            <div class="input-con-logo">
+                <img src="img/password.jpg" alt="Logo Contraseña">
+                <input type="password" name="password" id="password" required>
+            </div>
 
             <button type="submit">Ingresar</button>
         </form>

@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-// Inicializar el arreglo de usuarios en la sesión si no existe
 if (!isset($_SESSION['usuarios'])) {
     $_SESSION['usuarios'] = [];
 }

@@ -16,25 +16,26 @@
     font-size: 16px;
 }
 
-/* === ESTILOS GENERALES DE CONTENEDORES (LOGIN Y REGISTRO) === */
+/* ESTILOS GENERALES Y CONTENEDORES */
 body.body-login,
 body.body-registro {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f7f6;
+    background-color: #121212; 
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    color: #e0e0e0;
 }
 
 .login-container,
 .registro-container {
-    background: #ffffff;
+    background: #1e1e1e; 
     padding: 30px 40px;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
     width: 100%;
     max-width: 420px;
     box-sizing: border-box;
@@ -42,7 +43,7 @@ body.body-registro {
 
 .login-container h2,
 .registro-container h2 {
-    color: #333333;
+    color: #ffffff;
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 24px;
@@ -52,17 +53,31 @@ body.body-registro {
 .login-container label,
 .registro-container label {
     font-weight: 600;
-    color: #555555;
+    color: #b0b0b0; 
     font-size: 14px;
 }
 
-/* Campos de entrada para Login y Registro */
+.input-con-logo {
+    display: flex;
+    align-items: center; 
+    gap: 10px;        
+    margin-bottom: 15px; 
+}
+
+.input-con-logo img {
+    width: 24px;   
+    height: 24px; 
+    object-fit: contain;
+}
+
+.input-con-logo input,
 .login-container input[type="text"],
-.login-container input[type="password"],
-.registro-container .input-con-logo input {
+.login-container input[type="password"] {
     width: 100%;
     padding: 10px 12px;
-    border: 1px solid #ccc;
+    background-color: #2a2a2a; 
+    border: 1px solid #444444; 
+    color: #ffffff;
     border-radius: 6px;
     outline: none;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -72,11 +87,11 @@ body.body-registro {
     margin-bottom: 15px;
 }
 
+.input-con-logo input:focus,
 .login-container input[type="text"]:focus,
-.login-container input[type="password"]:focus,
-.registro-container .input-con-logo input:focus {
+.login-container input[type="password"]:focus {
     border-color: #4a90e2;
-    box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.4);
 }
 
 /* Botones */
@@ -106,7 +121,7 @@ body.body-registro {
     display: block;
     text-align: center;
     margin-top: 15px;
-    color: #4a90e2;
+    color: #58a6ff; 
     text-decoration: none;
     font-size: 14px;
 }
@@ -114,4 +129,13 @@ body.body-registro {
 .login-container a:hover,
 .registro-container a:hover {
     text-decoration: underline;
+}
+
+.input-con-logo img {
+    width: 24px;   
+    height: 24px; 
+    object-fit: contain;
+    background-color: #ffffff; 
+    padding: 4px;            
+    border-radius: 6px;
 }
