@@ -1,3 +1,4 @@
+/* Estilos generales previos que ya tenías */
 .input-con-logo {
     display: flex;
     align-items: center; 
@@ -5,15 +6,94 @@
     margin-bottom: 15px; 
 }
 
-/* Tamaño estándar para los logos/iconos */
 .input-con-logo img {
     width: 24px;   
     height: 24px; 
     object-fit: contain;
 }
 
-/* Estilo opcional para que los inputs o textos se vean ordenados */
 .input-con-logo input,
 .input-con-logo span {
     font-size: 16px;
+}
+
+/* === DISEÑO ELEGANTE Y SENCILLO SOLO PARA LA HOJA DE REGISTRO (git.php) === */
+body.body-registro {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.registro-container {
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 420px;
+    box-sizing: border-box;
+}
+
+.registro-container h2 {
+    color: #333333;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.registro-container label {
+    font-weight: 600;
+    color: #555555;
+    font-size: 14px;
+}
+
+.registro-container .input-con-logo input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.registro-container .input-con-logo input:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+}
+
+.registro-container button[type="submit"] {
+    width: 100%;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.registro-container button[type="submit"]:hover {
+    background-color: #357abd;
+}
+
+.registro-container a {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #4a90e2;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.registro-container a:hover {
+    text-decoration: underline;
 }

@@ -68,45 +68,48 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <!-- Vinculamos la hoja de estilos externa -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h2>Registro de Usuarios</h2>
+<body class="body-registro">
 
-    <?php if (!empty($mensaje)): ?>
-        <p style="color: <?php echo ($tipo_mensaje === 'exito') ? 'green' : 'red'; ?>; font-weight: bold;">
-            <?php echo $mensaje; ?>
-        </p>
-    <?php endif; ?>
+    <div class="registro-container">
+        <h2>Registro de Usuarios</h2>
 
-    <form action="registro.php" method="POST">
-        
-        <label for="nombre">Nombre:</label><br>
-        <div class="input-con-logo">
-            <img src="img/nombre.png" alt="Logo Nombre">
-            <input type="text" name="nombre" id="nombre" required>
-        </div>
+        <?php if (!empty($mensaje)): ?>
+            <p style="color: <?php echo ($tipo_mensaje === 'exito') ? 'green' : 'red'; ?>; font-weight: bold; text-align: center;">
+                <?php echo $mensaje; ?>
+            </p>
+        <?php endif; ?>
 
-        <label for="usuario">Nombre de usuario (login):</label><br>
-        <div class="input-con-logo">
-            <img src="img/usuario.png" alt="Logo Usuario">
-            <input type="text" name="usuario" id="usuario" required>
-        </div>
+        <form action="git.php" method="POST">
+            
+            <label for="nombre">Nombre:</label><br>
+            <div class="input-con-logo">
+                <img src="img/nombre.png" alt="Logo Nombre">
+                <input type="text" name="nombre" id="nombre" required>
+            </div>
 
-        <label for="password">Contraseña:</label><br>
-        <div class="input-con-logo">
-            <img src="img/password.jpg" alt="Logo Contraseña">
-            <input type="password" name="password" id="password" required>
-        </div>
+            <label for="usuario">Nombre de usuario (login):</label><br>
+            <div class="input-con-logo">
+                <img src="img/usuario.png" alt="Logo Usuario">
+                <input type="text" name="usuario" id="usuario" required>
+            </div>
 
-        <label for="confirmar_password">Confirmar Contraseña:</label><br>
-        <div class="input-con-logo">
-            <img src="img/password.jpg" alt="Logo Confirmar">
-            <input type="password" name="confirmar_password" id="confirmar_password" required>
-        </div>
+            <label for="password">Contraseña:</label><br>
+            <div class="input-con-logo">
+                <img src="img/password.jpg" alt="Logo Contraseña">
+                <input type="password" name="password" id="password" required>
+            </div>
 
-        <button type="submit">Registrarse</button>
-    </form>
+            <label for="confirmar_password">Confirmar Contraseña:</label><br>
+            <div class="input-con-logo">
+                <img src="img/password.jpg" alt="Logo Confirmar">
+                <input type="password" name="confirmar_password" id="confirmar_password" required>
+            </div>
 
-    <br>
-    <a href="login.php">Ir a Iniciar Sesión</a>
+            <button type="submit">Registrarse</button>
+        </form>
+
+        <a href="login.php">Ir a Iniciar Sesión</a>
+    </div>
+
 </body>
 </html>
