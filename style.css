@@ -1,23 +1,4 @@
-/* Estilos generales previos que ya tenías */
-.input-con-logo {
-    display: flex;
-    align-items: center; 
-    gap: 10px;        
-    margin-bottom: 15px; 
-}
-
-.input-con-logo img {
-    width: 24px;   
-    height: 24px; 
-    object-fit: contain;
-}
-
-.input-con-logo input,
-.input-con-logo span {
-    font-size: 16px;
-}
-
-/* === DISEÑO ELEGANTE Y SENCILLO SOLO PARA LA HOJA DE REGISTRO (git.php) === */
+body.body-login,
 body.body-registro {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f7f6;
@@ -29,6 +10,7 @@ body.body-registro {
     min-height: 100vh;
 }
 
+.login-container,
 .registro-container {
     background: #ffffff;
     padding: 30px 40px;
@@ -39,6 +21,7 @@ body.body-registro {
     box-sizing: border-box;
 }
 
+.login-container h2,
 .registro-container h2 {
     color: #333333;
     margin-top: 0;
@@ -47,12 +30,15 @@ body.body-registro {
     text-align: center;
 }
 
+.login-container label,
 .registro-container label {
     font-weight: 600;
     color: #555555;
     font-size: 14px;
 }
 
+.login-container input[type="text"],
+.login-container input[type="password"],
 .registro-container .input-con-logo input {
     width: 100%;
     padding: 10px 12px;
@@ -60,13 +46,21 @@ body.body-registro {
     border-radius: 6px;
     outline: none;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 15px;
 }
 
+.login-container input[type="text"]:focus,
+.login-container input[type="password"]:focus,
 .registro-container .input-con-logo input:focus {
     border-color: #4a90e2;
     box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
 }
 
+/* Botones */
+.login-container button[type="submit"],
 .registro-container button[type="submit"] {
     width: 100%;
     background-color: #4a90e2;
@@ -81,10 +75,12 @@ body.body-registro {
     margin-top: 10px;
 }
 
+.login-container button[type="submit"]:hover,
 .registro-container button[type="submit"]:hover {
     background-color: #357abd;
 }
 
+.login-container a,
 .registro-container a {
     display: block;
     text-align: center;
@@ -94,6 +90,7 @@ body.body-registro {
     font-size: 14px;
 }
 
+.login-container a:hover,
 .registro-container a:hover {
     text-decoration: underline;
 }

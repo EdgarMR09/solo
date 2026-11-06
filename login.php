@@ -52,27 +52,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
+    <!-- Vinculamos la hoja de estilos externa -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h2>Iniciar Sesión</h2>
+<body class="body-login">
 
-    <?php if (!empty($mensaje)): ?>
-        <p style="color: <?php echo ($tipo_mensaje === 'exito') ? 'green' : 'red'; ?>; font-weight: bold;">
-            <?php echo $mensaje; ?>
-        </p>
-    <?php endif; ?>
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
 
-    <form action="login.php" method="POST">
-        <label for="usuario">Nombre de usuario (login):</label><br>
-        <input type="text" name="usuario" id="usuario" required><br><br>
+        <?php if (!empty($mensaje)): ?>
+            <p style="color: <?php echo ($tipo_mensaje === 'exito') ? 'green' : 'red'; ?>; font-weight: bold; text-align: center;">
+                <?php echo $mensaje; ?>
+            </p>
+        <?php endif; ?>
 
-        <label for="password">Contraseña:</label><br>
-        <input type="password" name="password" id="password" required><br><br>
+        <form action="login.php" method="POST">
+            <label for="usuario">Nombre de usuario (login):</label>
+            <input type="text" name="usuario" id="usuario" required>
 
-        <button type="submit">Ingresar</button>
-    </form>
+            <label for="password">Contraseña:</label>
+            <input type="password" name="password" id="password" required>
 
-    <br>
-    <a href="git.php">Ir a Registro de Usuarios</a>
+            <button type="submit">Ingresar</button>
+        </form>
+
+        <a href="git.php">Ir a Registro de Usuarios</a>
+    </div>
+
 </body>
 </html>
